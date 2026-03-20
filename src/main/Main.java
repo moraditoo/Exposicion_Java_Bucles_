@@ -72,23 +72,21 @@ public class Main {
                 System.out.println("Ingrese un numero valido");
                 continue;
             }
-
+            
             if (num == 1) {
-                System.out.print("Ingrese numero de cuenta (8 digitos): ");
-                String cuenta = sc.next();
+                System.out.print("Ingrese monto: ");
+                double monto = sc.nextDouble();
 
-                if (cuenta.length() == 8) {
-                    System.out.print("Ingrese monto: ");
-                    double monto = sc.nextDouble();
+                if (monto <= Saldo) {
+                    Saldo -= monto;
 
-                    if (monto <= Saldo) {
-                        Saldo -= monto;
-                        System.out.println("Retiro exitoso");
-                    } else {
-                        System.out.println("Saldo insuficiente");
-                    }
+                    Random rand = new Random();
+                    int comprobante = rand.nextInt(900000) + 100000;
+
+                    System.out.println("Retiro exitoso");
+                    System.out.println("Número de comprobante: " + comprobante);
                 } else {
-                    System.out.println("El numero de cuenta debe tener 8 cifras");
+                    System.out.println("Saldo insuficiente");
                 }
             }
 

@@ -14,7 +14,6 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        // ----- CREAR CUENTA -----
         while (true) {
 
             System.out.println("--- CREAR CUENTA ---");
@@ -41,7 +40,6 @@ public class Main {
             break;
         }
 
-        // ----- LOGIN -----
         while (true) {
 
             System.out.println("--- Inicio de sesión ---");
